@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.63
+
+- SDK: Fixed `pathToClaudeCodeExecutable` failing when set to a bare command name (e.g., `"claude"`) that should resolve via PATH
+- Added `supportedAgents()` method to the Query interface to view available subagents
+- Fixed MCP replacement tools being incorrectly denied in subagents when using unprefixed MCP tool names
+
 ## 0.2.61
 
 - Updated to parity with Claude Code v2.1.61
