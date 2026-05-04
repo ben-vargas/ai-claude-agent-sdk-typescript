@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.128
+
+- Updated to parity with Claude Code v2.1.128
+
+## 0.2.127
+
+- Updated to parity with Claude Code v2.1.127
+
 ## 0.2.126
 
 - Added `origin` to result messages (`SDKResultSuccess` / `SDKResultError`) — forwards the triggering message's `SDKMessageOrigin` so consumers can distinguish user-prompted results from `task-notification` followups
