@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.132
+
+- Documented `applyFlagSettings()` in the TypeScript Agent SDK reference and added support for `null` on top-level keys to clear flag-settings overrides
+- Updated to parity with Claude Code v2.1.132
+
 ## 0.2.131
 
 - Updated to parity with Claude Code v2.1.131
