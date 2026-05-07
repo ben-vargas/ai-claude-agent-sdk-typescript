@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.133
+
+- Deprecated the unstable V2 session API (`unstable_v2_createSession` / `unstable_v2_resumeSession` / `unstable_v2_prompt`) — use `query()` instead
+- Deprecated passing `'Skill'` in `allowedTools` — use the `skills` option instead
+- Updated to parity with Claude Code v2.1.133
+
 ## 0.2.132
 
 - Documented `applyFlagSettings()` in the TypeScript Agent SDK reference and added support for `null` on top-level keys to clear flag-settings overrides
