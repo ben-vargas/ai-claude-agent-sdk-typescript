@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.2.136
+
+- Added `resolveSettings()` (alpha) to inspect effective merged settings without spawning the Claude CLI; reads MDM (plist/HKLM/HKCU) for parity with CLI startup
+- Deprecated `TodoWrite` tool — future versions will switch to Task tools (`TaskCreate`, `TaskGet`, `TaskUpdate`, `TaskList`)
+
+## 0.2.135
+
+- Updated to parity with Claude Code v2.1.135
+
+## 0.2.134
+
+- Updated to parity with Claude Code v2.1.134
+
 ## 0.2.133
 
 - Deprecated the unstable V2 session API (`unstable_v2_createSession` / `unstable_v2_resumeSession` / `unstable_v2_prompt`) — use `query()` instead
