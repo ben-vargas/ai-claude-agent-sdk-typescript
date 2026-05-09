@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.137
+
+- Updated to parity with Claude Code v2.1.137
+
 ## 0.2.136
 
 - Added `resolveSettings()` (alpha) to inspect effective merged settings without spawning the Claude CLI; reads MDM (plist/HKLM/HKCU) for parity with CLI startup
