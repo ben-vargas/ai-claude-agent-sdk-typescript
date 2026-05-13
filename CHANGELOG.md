@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.141
+
+- `TaskCreateInput`, `TaskCreateOutput`, `TaskGetInput`, `TaskGetOutput`, `TaskUpdateInput`, `TaskUpdateOutput`, `TaskListInput`, and `TaskListOutput` types are now exported from `@anthropic-ai/claude-agent-sdk/sdk-tools` and included in the `ToolInputSchemas`/`ToolOutputSchemas` unions
+- Aligned `@anthropic-ai/sdk` dependency to ^0.93.0
+
 ## 0.2.140
 
 - Updated to parity with Claude Code v2.1.140
