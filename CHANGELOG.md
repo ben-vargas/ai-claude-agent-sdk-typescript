@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.142
+
+- **Breaking:** Removed the v2 session API (`unstable_v2_createSession`, `unstable_v2_resumeSession`, `unstable_v2_prompt`, `SDKSession`, `SDKSessionOptions`), deprecated since 0.2.133. Use `query()` — pass an `AsyncIterable<SDKUserMessage>` for multi-turn, or `options.resume` to continue a session.
+- **Breaking:** MCP servers now connect in the background by default; sessions start immediately and slow servers report `status: "pending"` in `init` until ready. Set `MCP_CONNECTION_NONBLOCKING=0` to restore the old behavior of waiting up to 5s before the first query, or mark a server `alwaysLoad: true` to require it in turn 1.
+- **Breaking:** Headless and SDK sessions now use Task tools (`TaskCreate` / `TaskUpdate` / `TaskGet` / `TaskList`) instead of `TodoWrite`, deprecated since 0.2.136. Tool consumers should accumulate by task ID instead of replacing a snapshot list.
+- Surfaced `request_id`, `subagent_type`, and `task_description` on SDK message types and task system events
+- Headless `--sdk-url` sessions now exit non-zero with a stderr diagnostic when the remote transport closes permanently (401/403/404 or WS permanent close), instead of silently exiting 0
+
 ## 0.2.141
 
 - `TaskCreateInput`, `TaskCreateOutput`, `TaskGetInput`, `TaskGetOutput`, `TaskUpdateInput`, `TaskUpdateOutput`, `TaskListInput`, and `TaskListOutput` types are now exported from `@anthropic-ai/claude-agent-sdk/sdk-tools` and included in the `ToolInputSchemas`/`ToolOutputSchemas` unions
