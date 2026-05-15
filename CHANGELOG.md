@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.143
+
+- `@anthropic-ai/sdk` and `@modelcontextprotocol/sdk` are now `peerDependencies` instead of `dependencies`. Runtime is unaffected (both are bundled); npm/bun/pnpm auto-install them. yarn classic users should add them explicitly for full TypeScript type resolution
+
 ## 0.3.142
 
 - **Breaking:** Removed the v2 session API (`unstable_v2_createSession`, `unstable_v2_resumeSession`, `unstable_v2_prompt`, `SDKSession`, `SDKSessionOptions`), deprecated since 0.2.133. Use `query()` — pass an `AsyncIterable<SDKUserMessage>` for multi-turn, or `options.resume` to continue a session.
